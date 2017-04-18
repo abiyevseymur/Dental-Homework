@@ -1,0 +1,77 @@
+.header {
+  position: relative; }
+  .header .headlayot {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(14, 99, 119, 0.3);
+    z-index: 2;
+    height: 100%; }
+    .header .headlayot .head {
+      margin-top: 20px; }
+    .header .headlayot i {
+      border-radius: 100%;
+      background: #18afd3;
+      color: white;
+      padding: 10px 14px;
+      font-size: 24px; }
+    .header .headlayot .number,
+    .header .headlayot .location {
+      font-size: 16px;
+      color: white; }
+      .header .headlayot .number a,
+      .header .headlayot .location a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: white; }
+        .header .headlayot .number a:hover,
+        .header .headlayot .location a:hover {
+          text-decoration: underline;
+          cursor: pointer; }
+      .header .headlayot .number li,
+      .header .headlayot .location li {
+        list-style-type: none; }
+  .header img {
+    width: 100%;
+    cursor: pointer; }
+  .header .homeHead {
+    color: white;
+    font-size: 24px;
+    padding: 50px 0; }
+    .header .homeHead h1 {
+      font-size: 36px;
+      padding: 50px 0; }
+    .header .homeHead .btn {
+      background: #f57e57;
+      border-radius: 20px;
+      color: white;
+      margin-top: 50px;
+      padding: 10px 20px;
+      font-weight: 700px; }
+      .header .homeHead .btn:hover {
+        background: #18afd3; }
+  .header .form {
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    background: rgba(33, 33, 33, 0.4); }
+    .header .form input {
+      height: 50px; }
+    .header .form .message {
+      color: black;
+      height: 50px;
+      width: 224px;
+      border-radius: 5px;
+      margin-top: 30px; }
+
+.schedule {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap; }
+  .schedule .table {
+    height: 240px;
+    width: 390px;
+    background: #ccc;
+    margin: 40px; }
+
+/*# sourceMappingURL=sass.css.map */

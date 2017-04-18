@@ -1,0 +1,92 @@
+$goy:#18afd3;
+$sari:#f57e57;
+.header {
+    position: relative;
+    .headlayot {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: rgba(14, 99, 119, 0.3);
+        z-index: 2;
+        height: 100%;
+        .head {
+            margin-top: 20px;
+        }
+        i {
+            border-radius: 100%;
+            background: $goy;
+            color: white;
+            padding: 10px 14px;
+            font-size: 24px;
+        }
+        .number,
+        .location {
+            font-size: 16px;
+            color: white;
+            a {
+                margin-left: 15px;
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+    img {
+        width: 100%;
+        cursor: pointer;
+    }
+    .homeHead {
+        color: white;
+        font-size: 24px;
+        padding: 50px 0;
+        h1 {
+            font-size: 36px;
+            padding: 50px 0;
+        }
+        .btn {
+            background: $sari;
+            border-radius: 20px;
+            color: white;
+            margin-top: 50px;
+            padding: 10px 20px;
+            font-weight: 700px;
+            &:hover {
+                background: $goy;
+            }
+        }
+    }
+    .form {
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 16px;
+        background: rgba(33, 33, 33, 0.4);
+        input {
+            height: 50px;
+        }
+        .message {
+            color: black;
+            height: 50px;
+            width: 224px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.schedule {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    .table {
+        height: 240px;
+        width: 390px;
+        background: #ccc;
+        margin: 40px;
+    }
+}
