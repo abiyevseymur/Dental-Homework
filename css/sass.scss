@@ -55,7 +55,8 @@ $sari:#f57e57;
             color: white;
             margin-top: 50px;
             padding: 10px 20px;
-            font-weight: 700px;
+            font-weight: bold;
+            transition: 0.3s ease-out;
             &:hover {
                 background: $goy;
             }
@@ -63,7 +64,7 @@ $sari:#f57e57;
     }
     .form {
         border-radius: 10px;
-        padding: 20px;
+        padding: 20px 30px;
         font-size: 16px;
         background: rgba(33, 33, 33, 0.4);
         input {
@@ -72,7 +73,7 @@ $sari:#f57e57;
         .message {
             color: black;
             height: 50px;
-            width: 224px;
+            width: 202px;
             border-radius: 5px;
             margin-top: 30px;
         }
@@ -81,12 +82,31 @@ $sari:#f57e57;
 
 .schedule {
     display: flex;
-    align-content: space-around;
+    justify-content: space-around;
     flex-wrap: wrap;
-    .table {
-        height: 240px;
-        width: 390px;
-        background: #ccc;
-        margin: 40px;
+    .card{
+        .vertical{           
+            float: left;
+            width: 80px;
+            height: 240px;
+            margin-top: 40px;
+            background: $goy;
+                h1{
+                    position: absolute;
+                    bottom: 0;
+                    transform: rotate(-90deg);
+                    color: white;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+        }
+        .tableContent {  
+            float: left;                    
+            height: 240px;
+            width: 390px;
+            background: #ccc;
+            margin-top: 40px;
+        }
     }
+    
 }
