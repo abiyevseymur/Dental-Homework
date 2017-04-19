@@ -23,7 +23,7 @@ $boz:#F1F3F9;
     border-radius: 20px;
     color: white;
     margin-top: 50px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-weight: bold;
     transition: 0.3s ease-out;
     &:hover {
@@ -46,6 +46,11 @@ body {
 
 .header {
     position: relative;
+    .headBackImg{
+        background: url('../img/head1.jpg') no-repeat;
+        background-size: 1920px;
+        height: 900px;        
+    }
     .headlayot {
         position: absolute;
         top: 0;
@@ -82,7 +87,7 @@ body {
         }
     }
     img {
-        width: 100%;
+        max-width: 100%;
         cursor: pointer;
     }
     .homeHead {
@@ -117,7 +122,7 @@ body {
         .message {
             color: black;
             height: 50px;
-            width: 202px;
+            width: 100%;
             border-radius: 5px;
             margin-top: 30px;
         }
@@ -131,7 +136,7 @@ body {
     .card {
         .vertical {
             float: left;
-            width: 80px;
+            width: 50px;
             height: 240px;
             margin-top: 40px;
             display: flex;
@@ -152,7 +157,7 @@ body {
         .tableContent {
             float: left;
             height: 240px;
-            width: 390px;
+            width: 70%;
             background: $boz;
             margin-top: 40px;
             .cardContent {
@@ -173,6 +178,7 @@ body {
                     }
                     margin-top: 20px;
                     color: black;
+                    max-width: 100%;
                 }
             }
         }
@@ -249,6 +255,7 @@ body {
             transition: 0.3s ease-out;
             &:hover {
                 background: $sari;
+                transform: translateX(15px);     
             }
             a {
                 color: white;
@@ -267,5 +274,37 @@ body {
         font-size: 18px;
         margin-left: 40%;
         margin-bottom: 5%;
+    }
+}
+.consultation{
+    .consultImg{
+        
+        background: url('../img/background-05.jpg') no-repeat;
+        width: 100%;
+        .consultContent{
+            padding: 20%;
+            color: white;
+            h1{
+            line-height: 50px;
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+        p{
+            line-height: 30px;
+        }
+        .viewBtn{
+            @include btn;
+        }
+        }
+        
+    }
+}
+
+
+
+// media-query responsive
+@media only screen and (max-width:600px){
+    .head,.homeHead p{
+        display: none;
     }
 }
