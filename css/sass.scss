@@ -1,5 +1,49 @@
 $goy:#18afd3;
 $sari:#f57e57;
+$boz:#F1F3F9;
+@mixin tittle {
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+    text-decoration: none;
+    position: relative;
+}
+
+@mixin border() {
+    width: 8%;
+    position: absolute;
+    bottom: -30px;
+    left: 45%;
+    border-bottom: 3px solid $sari;
+    content: '';
+}
+
+@mixin btn {
+    background: $sari;
+    border-radius: 20px;
+    color: white;
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: 0.3s ease-out;
+    &:hover {
+        background: $goy;
+    }
+}
+
+body {
+    a {
+        padding: 0;
+        margin: 0;
+        color: black;
+        text-decoration: none;
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
+
 .header {
     position: relative;
     .headlayot {
@@ -84,29 +128,153 @@ $sari:#f57e57;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    .card{
-        .vertical{           
+    .card {
+        .vertical {
             float: left;
             width: 80px;
             height: 240px;
             margin-top: 40px;
+            display: flex;
+            justify-content: center;
             background: $goy;
-                h1{
-                    position: absolute;
-                    bottom: 0;
-                    transform: rotate(-90deg);
-                    color: white;
-                    font-weight: bold;
-                    font-size: 18px;
-                }
+            h1 {
+                transform: rotate(-90deg);
+                position: absolute;
+                bottom: 35%;
+                display: block;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                will-change: content;
+                white-space: nowrap;
+            }
         }
-        .tableContent {  
-            float: left;                    
+        .tableContent {
+            float: left;
             height: 240px;
             width: 390px;
-            background: #ccc;
+            background: $boz;
             margin-top: 40px;
+            .cardContent {
+                padding: 40px;
+                i {
+                    color: $sari;
+                    font-size: 30px;
+                }
+                h5 {
+                    margin-top: 20px;
+                    line-height: 35px;
+                    color: black;
+                }
+                p {
+                    strong {
+                        font-size: 28px;
+                        line-height: 60px;
+                    }
+                    margin-top: 20px;
+                    color: black;
+                }
+            }
         }
     }
-    
+}
+
+.mediaX {
+    margin: 80px auto;
+    .mediaTitle {
+        h1 {
+            text-align: center;
+            color: black;
+            margin-top: 50px;
+            text-decoration: none;
+            position: relative;
+            &:before {
+                width: 8%;
+                position: absolute;
+                bottom: -30px;
+                left: 45%;
+                border-bottom: 3px solid $sari;
+                content: '';
+            }
+        }
+        .choose {
+            margin-top: 70px;
+            .media {
+                margin: 0;
+                img {
+                    background: $sari;
+                    border-radius: 100%;
+                    padding: 20px 25px;
+                }
+                .media-body {
+                    padding-left: 20px;
+                    max-width: 300px;
+                    h3 {
+                        margin: 0;
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        color: #868686;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.services {
+    background: $boz;
+    h1 {
+        @include tittle;
+        &::before {
+            @include border()
+        }
+    }
+    p {
+        color: #868686;
+        margin: 70px auto;
+        text-align: center;
+    }
+    .serviceImg {
+        img {
+            border-radius: 5px;
+        }
+        .imgLine {
+            background: $goy;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 10px;
+            right: 0px;
+            border-radius: 5px;
+            transition: 0.3s ease-out;
+            &:hover {
+                background: $sari;
+            }
+            a {
+                color: white;
+                text-align: center;
+                line-height: 40px;
+                font-weight: bold;
+                padding: 0 15px;
+                i {
+                    display: none;
+                }
+            }
+        }
+    }
+    .btn {
+        @include btn;
+        font-size: 18px;
+        margin-left: 40%;
+        margin-bottom: 5%;
+        background: $goy;
+        h1 {
+            position: absolute;
+            bottom: 0;
+            transform: rotate(-90deg);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
 }
