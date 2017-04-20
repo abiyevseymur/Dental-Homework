@@ -34,18 +34,7 @@ $darkgray:#7a7a7a;
     }
 }
 
-// media-query responsive
-@media only screen and (max-width:600px) {
-    .head,
-    .homeHead p {
-        display: none;
-    }
-    .viewBtn {
-        margin-left: 0;
-    }
-}
 
-// media-query responsive
 body {
     height: 100%;
     margin: 0;
@@ -69,18 +58,20 @@ body {
 
 .header {
     position: relative;
+    height: 600px;
     .headBackImg {
         background: url('../img/head1.jpg') no-repeat;
-        background-size: 1920px;
-        height: 900px;
+        background-size: cover;
+        height: 100%;
+        transition: 0.3s all;
     }
     .headlayot {
         position: absolute;
         top: 0;
-        width: 100%;
+        min-width: 100%;
         background: rgba(14, 99, 119, 0.3);
         z-index: 2;
-        height: 100%;
+        min-height: 100%;
         .head {
             margin-top: 20px;
         }
@@ -116,16 +107,38 @@ body {
     .homeHead {
         color: white;
         font-size: 24px;
-        padding: 50px 0;
+        padding: 5% 0;
+         .dotes {
+                position: absolute;
+                bottom: 0%;
+                left: 10%;
+                .dotHead {
+                    height: 15px;
+                    width: 15px;
+                    background: lightgray;
+                    border-radius: 100%;
+                    display: inline-block;
+                    margin: 20px 10px;
+                    cursor: pointer;
+                    &:hover {
+                        background: $goy;
+                    }
+                }
+                .active {
+                    width: 17px;
+                    height: 17px;
+                    background: $goy;
+                }
+            }
         h1 {
             font-size: 36px;
-            padding: 50px 0;
+            padding: 5% 0;
         }
         .btn {
             background: $sari;
             border-radius: 20px;
             color: white;
-            margin-top: 50px;
+            margin: 3% 0;
             padding: 10px 20px;
             font-weight: bold;
             transition: 0.3s ease-out;
@@ -147,7 +160,7 @@ body {
             height: 50px;
             width: 100%;
             border-radius: 5px;
-            margin-top: 30px;
+            margin: 30px 0;
         }
     }
 }
@@ -643,3 +656,25 @@ body {
         }
     }
 }
+
+
+// media-query responsive
+
+@media only screen and (max-width:1000px) {
+    .header{
+        height: 900px;
+    }
+}
+@media only screen and (max-width:600px) {
+    .header{
+        height: 700px;
+    }
+    .head,
+    .homeHead p {
+        display: none;
+    }
+    .viewBtn {
+        margin-left: 0;
+    }
+}
+// media-query responsive
