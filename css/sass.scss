@@ -35,7 +35,7 @@ $darkgray:#7a7a7a;
 }
 
 // MY SASS 
-//menu Line
+//menu and Icon Line
 #menuIcon {
     color: $goy;
     padding: 15px 20px;
@@ -54,7 +54,32 @@ $darkgray:#7a7a7a;
         cursor: pointer;
     }
 }
-
+#upIcon {
+    color: $goy;
+    padding: 14px 20px;
+    z-index: 10;
+    font-size: 18px;
+    position: fixed;
+    background: white;
+    border-radius: 100%;
+    margin: 1% 15px;
+    box-shadow: 0 2px 5px #ccc;
+    transition: 0.3s all;
+    right: 0;
+    bottom: 0;
+    a{
+        color: $goy;
+        transition: 0.3s all;
+    }
+    &:hover {
+        color: white;
+        background: $goy;
+        cursor: pointer;
+        a{
+            color: white;
+        }
+    }
+}
 .menuLine {
     background: white;
     position: fixed;
@@ -95,6 +120,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     a {
         padding: 0;
         margin: 0;
@@ -372,7 +398,7 @@ body {
 .consultation {
     .consultImg {
         background: url('../img/background-05.jpg') no-repeat;
-        width: 100%;
+            background-size: cover;
         .consultContent {
             padding: 20%;
             color: white;
@@ -449,6 +475,7 @@ body {
                             font-size: 16px;
                             margin: 10px 0;
                             margin-left: 20px;
+                            max-width: 500px;
                         }
                     }
                 }
@@ -498,7 +525,7 @@ body {
             right: 0;
             transition: all 800ms ease;
             .mediaPerson {
-                width: 390px;
+                width: 350px;
                 margin-right: 50px;
                 float: left;
                 padding: 1% 0;
@@ -735,6 +762,11 @@ body {
     .mediaPerson {
         width: 1170px !important;
     }
+       #mediaInfo{
+           width: 28%;
+       }   
+            
+    
 }
 
 @media only screen and (max-width:600px) {
