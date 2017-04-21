@@ -34,7 +34,63 @@ $darkgray:#7a7a7a;
     }
 }
 
+// MY SASS 
+//menu Line
+#menuIcon {
+    color: $goy;
+    padding: 15px 20px;
+    z-index: 10;
+    font-size: 18px;
+    position: fixed;
+    background: white;
+    border-radius: 100%;
+    margin: 5% 15px;
+    box-shadow: 0 2px 5px #ccc;
+    transition: 0.3s all;
+    left: 0;
+    &:hover {
+        color: white;
+        background: $goy;
+        cursor: pointer;
+    }
+}
 
+.menuLine {
+    background: white;
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    z-index: 9;
+    left: -25%;
+    transition: 0.3s all;
+    #menuName {
+        line-height: 40px;
+        list-style-type: none;
+        font-weight: 500;
+        padding: 20% 15%;
+        #search {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        i {
+            color: $sari;
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        a {
+            color: $sari;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s all;
+            &:hover {
+                color: #d55830;
+            }
+        }
+    }
+}
+
+//
 body {
     height: 100%;
     margin: 0;
@@ -108,28 +164,28 @@ body {
         color: white;
         font-size: 24px;
         padding: 5% 0;
-         .dotes {
-                position: absolute;
-                bottom: 0%;
-                left: 10%;
-                .dotHead {
-                    height: 15px;
-                    width: 15px;
-                    background: lightgray;
-                    border-radius: 100%;
-                    display: inline-block;
-                    margin: 20px 10px;
-                    cursor: pointer;
-                    &:hover {
-                        background: $goy;
-                    }
-                }
-                .active {
-                    width: 17px;
-                    height: 17px;
+        .dotes {
+            position: absolute;
+            bottom: 0%;
+            left: 10%;
+            .dotHead {
+                height: 15px;
+                width: 15px;
+                background: lightgray;
+                border-radius: 100%;
+                display: inline-block;
+                margin: 20px 10px;
+                cursor: pointer;
+                &:hover {
                     background: $goy;
                 }
             }
+            .active {
+                width: 17px;
+                height: 17px;
+                background: $goy;
+            }
+        }
         h1 {
             font-size: 36px;
             padding: 5% 0;
@@ -334,13 +390,13 @@ body {
         }
     }
     .consultTestimonials {
-        width: 100%;
+        width: 500px;
         overflow: hidden;
         .consult {
             position: relative;
-            height: 600px;
+            margin: 50px;
+            margin-bottom: 0;
             .tittleT {
-                padding: 10%;
                 h1 {
                     line-height: 50px;
                     font-size: 38px;
@@ -354,60 +410,57 @@ body {
                     }
                 }
             }
-            .testimonials {
-                position: absolute;
-                left: 10%;
-                top: 25%;
-                i {
-                    font-size: 38px;
-                    color: $goy;
-                    margin-top: 40px;
-                }
-                #cursive {
-                    font-style: italic;
-                    color: $darkgray;
-                    line-height: 40px;
-                    margin-top: 20px;
-                    font-size: 26px;
-                }
-                .media {
-                    img {
-                        border-radius: 100%;
-                    }
-                    h3 {
+            .moveTestimonials {
+                width: 7000px;
+                margin: 0 auto;
+                position: relative;
+                transition: all 800ms ease;
+                right: 0;
+                .testimonials {
+                    width: 450px;
+                    margin-right: 50px;
+                    float: left;
+                    transition: all 800ms ease;
+                    i {
+                        font-size: 38px;
                         color: $goy;
-                        font-weight: bold;
-                        margin: 0;
-                        margin-left: 20px;
+                        margin-top: 40px;
                     }
-                    p {
-                        color: lightgray;
+                    #cursive {
                         font-style: italic;
-                        font-size: 16px;
-                        margin: 10px 0;
-                        margin-left: 20px;
+                        color: $darkgray;
+                        line-height: 40px;
+                        margin-top: 20px;
+                        font-size: 26px;
+                    }
+                    .media {
+                        img {
+                            border-radius: 100%;
+                        }
+                        h3 {
+                            color: $goy;
+                            font-weight: bold;
+                            margin: 0;
+                            margin-left: 20px;
+                        }
+                        p {
+                            color: lightgray;
+                            font-style: italic;
+                            font-size: 16px;
+                            margin: 10px 0;
+                            margin-left: 20px;
+                        }
                     }
                 }
-            }
-            .testimonialsx {
-                position: absolute;
-                left: 100%;
-            }
-            .testimonialsxx {
-                position: absolute;
-                left: 100%;
             }
             .dotes {
-                position: absolute;
-                bottom: 0%;
-                left: 10%;
                 .dot {
                     height: 15px;
                     width: 15px;
                     background: lightgray;
                     border-radius: 100%;
                     display: inline-block;
-                    margin: 40px 10px;
+                    margin: 0px 10px;
                     cursor: pointer;
                     &:hover {
                         background: $goy;
@@ -435,32 +488,47 @@ body {
         }
     }
     .team {
-        margin: 70px auto;
-        line-height: 40px;
-        h3 {
-            color: $goy;
-            margin: 0;
-            margin-left: 10px;
-        }
-        p {
-            color: $darkgray;
-            margin: 0;
-            margin-left: 10px;
-            font-style: italic;
-        }
-        a {
-            margin: 0;
-            margin-left: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            color: black;
-            i {
-                color: $goy;
-                font-size: 24px;
-                margin-right: 10px;
-            }
-            &:hover {
-                text-decoration: underline;
+        max-width: 1170px;
+        overflow: hidden;
+        margin: -10px auto;
+        .teamMove {
+            line-height: 40px;
+            width: 15000px;
+            position: relative;
+            right: 0;
+            transition: all 800ms ease;
+            .mediaPerson {
+                width: 390px;
+                margin-right: 50px;
+                float: left;
+                padding: 1% 0;
+                padding-bottom: 30px;
+                h3 {
+                    color: $goy;
+                    margin: 0;
+                    margin-left: 10px;
+                }
+                p {
+                    color: $darkgray;
+                    margin: 0;
+                    margin-left: 10px;
+                    font-style: italic;
+                }
+                a {
+                    margin: 0;
+                    margin-left: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: black;
+                    i {
+                        color: $goy;
+                        font-size: 24px;
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
@@ -470,9 +538,10 @@ body {
         font-weight: 500;
         font-style: normal;
     }
-    .dotes {
+    .dotesMedia {
         margin-left: 45%;
-        .dot {
+        padding: 5% 0;
+        .dotMedia {
             height: 15px;
             width: 15px;
             background: lightgray;
@@ -493,7 +562,8 @@ body {
 }
 
 .features {
-    margin: 80px 0;
+    padding: 5% 0;
+    background: white;
     h1 {
         @include tittle;
         &::before {
@@ -501,7 +571,7 @@ body {
         }
     }
     .item {
-        padding: 60px 0px;
+        padding: 40% 0px;
         padding-bottom: 20px;
         img {
             width: 100%;
@@ -657,16 +727,18 @@ body {
     }
 }
 
-
 // media-query responsive
-
 @media only screen and (max-width:1000px) {
-    .header{
+    .header {
         height: 900px;
     }
+    .mediaPerson {
+        width: 1170px !important;
+    }
 }
+
 @media only screen and (max-width:600px) {
-    .header{
+    .header {
         height: 700px;
     }
     .head,
@@ -677,4 +749,5 @@ body {
         margin-left: 0;
     }
 }
+
 // media-query responsive
