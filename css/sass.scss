@@ -54,7 +54,8 @@ $darkgray:#7a7a7a;
         cursor: pointer;
     }
 }
-#upIcon {
+
+#scrollUp {
     color: $goy;
     padding: 14px 20px;
     z-index: 10;
@@ -65,21 +66,16 @@ $darkgray:#7a7a7a;
     margin: 1% 15px;
     box-shadow: 0 2px 5px #ccc;
     transition: 0.3s all;
-    right: 0;
-    bottom: 0;
-    a{
-        color: $goy;
-        transition: 0.3s all;
-    }
+    right: 20px;
+    bottom: 20px;
+    display: none;
     &:hover {
         color: white;
         background: $goy;
         cursor: pointer;
-        a{
-            color: white;
-        }
     }
 }
+
 .menuLine {
     background: white;
     position: fixed;
@@ -156,35 +152,35 @@ body {
         min-height: 100%;
         .head {
             margin-top: 20px;
-        }
-        i {
-            border-radius: 100%;
-            background: $goy;
-            color: white;
-            padding: 10px 14px;
-            font-size: 24px;
-        }
-        .number,
-        .location {
-            font-size: 16px;
-            color: white;
-            a {
-                margin-left: 15px;
-                text-decoration: none;
+            i {
+                border-radius: 100%;
+                background: $goy;
                 color: white;
-                &:hover {
-                    text-decoration: underline;
-                    cursor: pointer;
+                padding: 10px 14px;
+                font-size: 24px;
+            }
+            .number,
+            .location {
+                font-size: 16px;
+                color: white;
+                a {
+                    margin-left: 15px;
+                    text-decoration: none;
+                    color: white;
+                    &:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                li {
+                    list-style-type: none;
                 }
             }
-            li {
-                list-style-type: none;
-            }
         }
-    }
-    img {
-        max-width: 100%;
-        cursor: pointer;
+        img {
+            max-width: 100%;
+            cursor: pointer;
+        }
     }
     .homeHead {
         color: white;
@@ -398,7 +394,7 @@ body {
 .consultation {
     .consultImg {
         background: url('../img/background-05.jpg') no-repeat;
-            background-size: cover;
+        background-size: cover;
         .consultContent {
             padding: 20%;
             color: white;
@@ -762,11 +758,9 @@ body {
     .mediaPerson {
         width: 1170px !important;
     }
-       #mediaInfo{
-           width: 28%;
-       }   
-            
-    
+    #mediaInfo {
+        width: 28%;
+    }
 }
 
 @media only screen and (max-width:600px) {

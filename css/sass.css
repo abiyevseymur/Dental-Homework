@@ -15,6 +15,25 @@
     background: #18afd3;
     cursor: pointer; }
 
+#scrollUp {
+  color: #18afd3;
+  padding: 14px 20px;
+  z-index: 10;
+  font-size: 18px;
+  position: fixed;
+  background: white;
+  border-radius: 100%;
+  margin: 1% 15px;
+  box-shadow: 0 2px 5px #ccc;
+  transition: 0.3s all;
+  right: 20px;
+  bottom: 20px;
+  display: none; }
+  #scrollUp:hover {
+    color: white;
+    background: #18afd3;
+    cursor: pointer; }
+
 .menuLine {
   background: white;
   position: fixed;
@@ -47,7 +66,8 @@
 body {
   height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden; }
   body a {
     padding: 0;
     margin: 0;
@@ -78,31 +98,31 @@ body {
     min-height: 100%; }
     .header .headlayot .head {
       margin-top: 20px; }
-    .header .headlayot i {
-      border-radius: 100%;
-      background: #18afd3;
-      color: white;
-      padding: 10px 14px;
-      font-size: 24px; }
-    .header .headlayot .number,
-    .header .headlayot .location {
-      font-size: 16px;
-      color: white; }
-      .header .headlayot .number a,
-      .header .headlayot .location a {
-        margin-left: 15px;
-        text-decoration: none;
+      .header .headlayot .head i {
+        border-radius: 100%;
+        background: #18afd3;
+        color: white;
+        padding: 10px 14px;
+        font-size: 24px; }
+      .header .headlayot .head .number,
+      .header .headlayot .head .location {
+        font-size: 16px;
         color: white; }
-        .header .headlayot .number a:hover,
-        .header .headlayot .location a:hover {
-          text-decoration: underline;
-          cursor: pointer; }
-      .header .headlayot .number li,
-      .header .headlayot .location li {
-        list-style-type: none; }
-  .header img {
-    max-width: 100%;
-    cursor: pointer; }
+        .header .headlayot .head .number a,
+        .header .headlayot .head .location a {
+          margin-left: 15px;
+          text-decoration: none;
+          color: white; }
+          .header .headlayot .head .number a:hover,
+          .header .headlayot .head .location a:hover {
+            text-decoration: underline;
+            cursor: pointer; }
+        .header .headlayot .head .number li,
+        .header .headlayot .head .location li {
+          list-style-type: none; }
+    .header .headlayot img {
+      max-width: 100%;
+      cursor: pointer; }
   .header .homeHead {
     color: white;
     font-size: 24px;
@@ -287,7 +307,7 @@ body {
 
 .consultation .consultImg {
   background: url("../img/background-05.jpg") no-repeat;
-  width: 100%; }
+  background-size: cover; }
   .consultation .consultImg .consultContent {
     padding: 20%;
     color: white; }
@@ -363,7 +383,8 @@ body {
           font-style: italic;
           font-size: 16px;
           margin: 10px 0;
-          margin-left: 20px; }
+          margin-left: 20px;
+          max-width: 500px; }
     .consultation .consultTestimonials .consult .dotes .dot {
       height: 15px;
       width: 15px;
@@ -409,7 +430,7 @@ body {
       right: 0;
       transition: all 800ms ease; }
       .ourTeam .team .teamMove .mediaPerson {
-        width: 390px;
+        width: 350px;
         margin-right: 50px;
         float: left;
         padding: 1% 0;
@@ -618,7 +639,10 @@ body {
     height: 900px; }
 
   .mediaPerson {
-    width: 1170px !important; } }
+    width: 1170px !important; }
+
+  #mediaInfo {
+    width: 28%; } }
 @media only screen and (max-width: 600px) {
   .header {
     height: 700px; }
